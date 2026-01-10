@@ -14,8 +14,9 @@ export const Adminpanel = () => {
 
   const fetchcomplaints = async (e) => {
     // e.preventDefault()
+    const Api_url=import.meta.env.VITE_API_URL
     try {
-      const res = await fetch("http://localhost:2000/api/admin/complaint/summary", {
+      const res = await fetch(`${Api_url}/api/admin/complaint/summary`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

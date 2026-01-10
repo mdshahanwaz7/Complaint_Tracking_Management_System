@@ -2,8 +2,9 @@ export const updateComplaintStatus = async (id, status) => {
   const getAuthHeader = () => ({
   Authorization: `Bearer ${localStorage.getItem("token")}`,
 });
+const Api_url=import.meta.env.VITE_API_URL
   const res = await fetch(
-    `http://localhost:2000/api/admin/complaint/${id}/status`,
+    `${Api_url}/api/admin/complaint/${id}/status`,
     {
       method: "PUT",
       headers: {
