@@ -23,8 +23,8 @@ function Complaintssummary() {
             console.log("no token founded ")
             return;
         }
-
-        const res = await fetch('http://localhost:2000/api/complaint/summary', {
+       const Api_url=import.meta.env.VITE_API_URL
+        const res = await fetch(`${Api_url}/api/complaint/summary`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
