@@ -34,8 +34,8 @@ const navigate=useNavigate()
     
   </button>
   <div className="  rounded mb-5 ">
-    <div><AiOutlineLogout className="" /></div>
-    <button onClick={()=>{navigate('/')}} className='  '></button>
+    <div><AiOutlineLogout className="" />
+    <button onClick={()=>{navigate('/')}} className='  '></button> </div>
 
   </div>
 </aside>
