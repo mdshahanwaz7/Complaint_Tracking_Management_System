@@ -54,7 +54,7 @@ const AdminNavbar = () => {
              {
             open?( <ul className=' rounded w-1/9 max-w-sx h-screen   py-3 gap-4 items-center  flex flex-col  bg-white md:hidden   '>
                 <li className='text-indigo-900  '><IoIosNotifications className='size-6' /></li>
-                   <li className='text-indigo-800 pt-1'> <FaMessage /></li>
+                   <li className='text-indigo-900 pt-1'> <FaMessage /></li>
 
                 {/* <IoIosMenu />
                     <IoCloseOutline /> */}
