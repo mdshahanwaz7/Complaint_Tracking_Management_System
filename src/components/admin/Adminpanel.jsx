@@ -66,39 +66,35 @@ export const Adminpanel = () => {
       <div className="bg-white rounded-lg shadow overflow-x-auto w-full ">
 
 
-        <div className="grid grid-cols-9 gap-4 bg-gray-100 px-4 py-3 text-sm font-semibold text-gray-700">
+        <div className="grid grid-cols-5 bg-gray-100 px-4 py-3 text-sm font-semibold text-gray-700">
           <div>Date</div>
           <div>Name</div>
           <div>Category</div>
-          <div>Description</div>
-          <div>Address</div>
-          <div>District</div>
-          <div>Pincode</div>
-          <div>Status</div>
-          <div className="text-center">Action</div>
+         <div className=' '>Status</div>
+          <div className=" ">Action</div>
         </div>
 
 
         {Array.isArray(complain) && complain.map((e) =>(
           <div
             key={e._id}
-            className="grid grid-cols-9 gap-4 px-4 py-3 text-sm text-gray-800 odd:bg-gray-100 even:bg-white items-center hover:bg-gray-50"
+            className="grid grid-cols-5 gap-4 px-4 py-3 text-sm text-gray-800 odd:bg-gray-100 even:bg-white items-center hover:bg-gray-50"
           >
-            <div>{new Date(e.createdAt).toLocaleDateString()}</div>
+            <div className='text-xs'>{new Date(e.createdAt).toLocaleDateString()}</div>
             <div className="font-medium">{e.name}</div>
             <div className="capitalize">{e.category}</div>
 
-
+{/* 
             <div className="truncate max-w-xs ">{e.description}</div>
 
             <div className="truncate max-w-xs">{e.address}</div>
             <div>{e.district}</div>
-            <div>{e.pincode}</div>
+            <div>{e.pincode}</div> */}
 
 
             <div>
               <span
-                className={`px-3 py-1 rounded-md text-xs font-semibold
+                className={`  py-1 relative right-3 px-2 rounded-md text-xs font-semibold
             ${e.status === "pending"
                     ? "bg-yellow-500 text-white"
                     : e.status === "in_progress"
@@ -111,8 +107,8 @@ export const Adminpanel = () => {
             </div>
 
             {/* Action Button */}
-            <div className="text-center">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-xs" onClick={() => handleview(e)}>
+            <div className="">
+              <button className="bg-green-600 relative py-1 right-3 px-4  hover:bg-green-700 text-center  text-white  rounded-md text-xs" onClick={() => handleview(e)}>
                 View
               </button>
             </div>
@@ -124,8 +120,8 @@ export const Adminpanel = () => {
 
       <div>
         {open ?  (
-          <div className="fixed inset-1 bg-black/40 flex items-center justify-center  ">
-            <div className="bg-white  rounded-lg w-[500px] shadow-md pb-3  ">
+          <div className="fixed inset-1 ml-6 bg-black/40 flex items-center justify-center  ">
+            <div className="bg-white  rounded-lg w-[300px] md:w-[500px] shadow-md   ">
               <h2 className="text-lg mb-3 rounded px-4 shadow-md font-bold py-3 rounded-b-md ">Complaint Details</h2>
               <p className='px-4'><b>Date:</b> {new Date(view.createdAt).toLocaleDateString()}</p>
 
@@ -144,15 +140,15 @@ export const Adminpanel = () => {
 
 
 
-              <div className='flex justify-between px-6 py-4'>
+              <div className='flex justify-between  px-2 py-4'>
                 <button
-                  className=" bg-red-600 px-7 text-white py-2 rounded-md"
+                  className=" bg-red-600 text-md px-6 md:px-9  text-white  rounded-md"
                   onClick={() => setopen(false)}
                 >
                   Close
                 </button>
-                <button onClick={() => handlechange(view._id, "in_progress")} className=' px-7 py-2 rounded-md bg-blue-900 text-white'>InProgress</button>
-                <button onClick={() => handlechange(view._id, "resolved")} className=' px-7 py-2 text-white bg-green-600 rounded-md'>Resolved</button>
+                <button onClick={() => handlechange(view._id, "in_progress")} className=' text-md px-3 py-2 rounded-md md:px-9 bg-blue-900 text-white'>InProgress</button>
+                <button onClick={() => handlechange(view._id, "resolved")} className=' px-3 text-md py-2 text-white md:px-9 bg-green-600 rounded-md'>Resolved</button>
               </div>
             </div>
           </div>

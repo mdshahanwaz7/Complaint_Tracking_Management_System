@@ -22,13 +22,13 @@ const AdminNavbar = () => {
 
   return (
     <>
-       <div className='bg-blue-950 opacity-90   pt-2 flex justify-between px-2 h-10  shadow-md '>
-                <div className=' text-white'>Complaint Management System </div>
+       <div className='bg-indigo-950 px-1 items-center justify-between    flex  h-10  shadow-md '>
+                <div className=' text-white text-xs sm:text-sm sm:text-center  md:text-md lg:text-xl text-center'>Complaint Management System </div>
                 <ul className=' md:flex hidden gap-4 justify-between  '>
                     <li className='hover:text-shadow-md text-white '>Home</li>
                     <li className='hover:text-shadow-md text-white'> About</li>
                     <li className='hover:text-shadow-md text-white'> Contact</li>
-                    <li className='hover:text-shadow-md v'> Logout</li>
+                    <li className='hover:text-shadow-md text-white'> Logout</li>
 
                    
                 </ul>
