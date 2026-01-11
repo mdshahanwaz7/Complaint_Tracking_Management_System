@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+
+import { FaMessage } from "react-icons/fa6";
+
+
+import { CiSearch } from "react-icons/ci";
+import { IoIosNotifications } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -22,13 +28,20 @@ const AdminNavbar = () => {
 
   return (
     <>
-       <div className='bg-indigo-950 px-1 items-center justify-between    flex  h-10  shadow-md '>
-                <div className=' text-white text-xs sm:text-sm sm:text-center  md:text-md lg:text-xl text-center'>Complaint Management System </div>
+       <div className='bg-indigo-950 px-3 items-center justify-between    flex  h-10  shadow-md '>
+                <div className=' text-white text-xs sm:text-sm sm:text-center  md:text-xl lg:text-xl text-center'>Complaint Management System </div>
                 <ul className=' md:flex hidden gap-4 justify-between  '>
-                    <li className='hover:text-shadow-md text-white '>Home</li>
+                    {/* <li className='hover:text-shadow-md text-white '>Home</li>
                     <li className='hover:text-shadow-md text-white'> About</li>
                     <li className='hover:text-shadow-md text-white'> Contact</li>
-                    <li className='hover:text-shadow-md text-white'> Logout</li>
+                    <li className='hover:text-shadow-md text-white'> Logout</li> */}
+                   <li className='flex '>
+                    
+                    <input type="text" className='rounded-full border-white  border focus:outline-none focus:border-indigo-700 ' />
+                    <CiSearch className='text-white right-7 top-1/9 relative size-5  '/>
+                   </li>
+                   <li className='text-white  '><IoIosNotifications className='size-6' /></li>
+                   <li className='text-white pt-1'> <FaMessage /></li>
 
                    
                 </ul>
@@ -39,11 +52,10 @@ const AdminNavbar = () => {
           <div className='  absolute  flex justify-end inset-0  z-50   top-9 right-0'>
 
              {
-            open?( <ul className=' rounded w-1/3 max-w-sx h-screen   space-y-6 pl-2 flex flex-col  bg-white md:hidden   mr-1'>
-                <li className='hover:text-shadow-md cursor-pointer text-gray-700 '>Home</li>
-                <li className='hover:text-shadow-md text-gray-700 cursor-pointer'> About</li>
-                <li className='hover:text-shadow-md text-gray-700 cursor-pointer'> Contact</li>
-                <li className=' mt-auto pb-1 text-gray-700 hover:text-shadow-md cursor-pointer'> Logout</li>
+            open?( <ul className=' rounded w-1/9 max-w-sx h-screen   py-3 gap-4 items-center  flex flex-col  bg-white md:hidden   '>
+                <li className='text-indigo-900  '><IoIosNotifications className='size-6' /></li>
+                   <li className='text-indigo-800 pt-1'> <FaMessage /></li>
+
                 {/* <IoIosMenu />
                     <IoCloseOutline /> */}
             </ul>):null
