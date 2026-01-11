@@ -14,7 +14,7 @@ const navigate=useNavigate()
     return (
         <div>
            <aside className=" h-screen bg-indigo-950 opacity-90 text-white  flex flex-col justify-between    px-2 py-1   ">
-  <ul className=" flex flex-col gap-4 py-2 ">
+  <ul className=" flex flex-col gap-9 py-2 ">
     <li className="  ">
       <IoHomeSharp />
 
@@ -30,12 +30,11 @@ const navigate=useNavigate()
     </li>
     
   </ul>
-  <button>
-    
-  </button>
+  
   <div className="  rounded mb-5 ">
-    <div><AiOutlineLogout className="" />
-    <button onClick={()=>{navigate('/')}} className='  '></button> </div>
+    <div className="">
+    <button onClick={()=>{navigate('/')}} className='  '>
+      <AiOutlineLogout className="" /></button> </div>
 
   </div>
 </aside>
