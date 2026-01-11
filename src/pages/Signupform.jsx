@@ -11,12 +11,8 @@ const Signupform = () => {
 
   const handlelogics = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
+
     const Api_url=import.meta.env.VITE_API_URL
-=======
-    const Api_url=import.
-meta.env.VITE_API_URL
->>>>>>> local
     try {
       const res = await fetch(`${Api_url}/api/user/register`, {
         method: "POST",

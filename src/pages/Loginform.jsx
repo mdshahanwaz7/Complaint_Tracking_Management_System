@@ -18,16 +18,14 @@ const Loginform = () => {
     e.preventDefault();
     // alert("FORM SUBMITTED"); // 🔥 test
 
-<<<<<<< HEAD
+
  const Api_url=import.meta.env.VITE_API_URL
 
-=======
+
 
   
   
-  const Api_url = import.meta.env.VITE_API_URL;
   
->>>>>>> local
     try {
       const res = await fetch(`${Api_url}/api/user/login`, {
         method: "POST",
