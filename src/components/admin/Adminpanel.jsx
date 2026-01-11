@@ -13,6 +13,7 @@ export const Adminpanel = () => {
 
 
   const fetchcomplaints = async (e) => {
+    const Api_url = import.meta.env.VITE_API_URL;
     // e.preventDefault()
     const Api_url=import.meta.env.VITE_API_URL
     try {

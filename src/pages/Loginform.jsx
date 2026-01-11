@@ -18,8 +18,16 @@ const Loginform = () => {
     e.preventDefault();
     // alert("FORM SUBMITTED"); // 🔥 test
 
+<<<<<<< HEAD
  const Api_url=import.meta.env.VITE_API_URL
 
+=======
+
+  
+  
+  const Api_url = import.meta.env.VITE_API_URL;
+  
+>>>>>>> local
     try {
       const res = await fetch(`${Api_url}/api/user/login`, {
         method: "POST",
@@ -59,18 +67,18 @@ const Loginform = () => {
   return (
 
     <form action="" onSubmit={handlelogic}>
-      <div className='min-h-screen flex items-center justify-center bg-gray-100'
+      <div className='min-h-screen flex items-center justify-center bg-indigo-900'
       >
 
 
         <div className='bg-white w-[380px] p-8 rounded-xl shadow-xl '>
-          <h2 className='text-xl    font-bold text-center mb-3.5'>Complaint Management system</h2> <hr className='my-4 h-px bg-gray-200 border-slate-500' />
+          <h2 className='text-xl    font-bold text-center mb-3.5'>Complaint Management system</h2> <hr className='my-4 h-px text-indigo-800' />
           <h2 className='text-xl font-bold text-center mb-6'>Login</h2>
 
           <div className='relative w-full mb-6  '>
             <div className='relative flex '>
-              <FaUser className="absolute left-2 top-6 -translate-y-1/2 text-gray-400" />
-              <input type="email" placeholder='' value={form.email} onChange={((e) => { setform({ ...form, email: e.target.value }) })} id="email" className="mb-5 pl-8 p-5 cursor-pointer peer w-full px-3 py-2 border border-slate-900 rounded-md focus:outline-non focus:border-slate-900   " />
+              <FaUser className="absolute left-2 top-6 -translate-y-1/2 text-gray-900" />
+              <input type="email" placeholder='' value={form.email} onChange={((e) => { setform({ ...form, email: e.target.value }) })} id="email" className="mb-5 pl-8 p-5 cursor-pointer peer w-full px-3 py-2 border border-gray-400 rounded-md  focus:ring-indigo-900  focus:ring-2 focus:outline-none   " />
               <label htmlFor="email" className=" cursor-pointer  absolute left-6 top-3 text-gray-500 bg-white px-1 
                transition-all duration-300
                peer-placeholder-shown:top-2.5
@@ -81,26 +89,26 @@ const Loginform = () => {
                peer-focus:text-slate-900 peer-not-placeholder-shown:-top-2 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-500 ">Enter Email</label><br />
             </div>
             <div className='relative w-full mb-6 '>
-              <FaLock className="absolute left-2 top-6 -translate-y-1/2 text-gray-400" />
+              <FaLock className="absolute left-2 top-6 -translate-y-1/2 text-gray-900" />
               <input type={show ? 'text' : 'password'} id="password" value={form.password} onChange={(e) => {
                 setform({ ...form, password: e.target.value })
-              }} placeholder='' className="pl-8   cursor-pointer peer w-full px-3 py-2 border border-slate-900 rounded-md focus:outline-non focus:border-slate-900" />
+              }} placeholder='' className="pl-8   cursor-pointer peer w-full px-3 py-2 border  rounded-md border-gray-400 rounded-md  focus:ring-indigo-900  focus:ring-2 focus:outline-none " />
 
               <label htmlFor="password" className="absolute cursor-pointer  left-6 top-2  bg-white px-1 text-gray-500 transition-all duration-300 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:gray-400
             peer-not-placeholder-shown:-top-2
             peer-not-placeholder-shown:text-sm
             peer-not-placeholder-shown:text-gray-500
              peer-focus:-top-2 peer-focus:text-sm peer-focus:text-slate-900" >Enter Password</label><br />
-              <button className='absolute right-3 top-4' onClick={() => { setshow(!show) }}>{show ? <FaEye /> : <FaEyeSlash />}</button>
+              <button type='button' className='absolute right-3 top-4' onClick={() => { setshow(!show) }}>{show ? <FaEye /> : <FaEyeSlash />}</button>
             </div>
           </div>
 
-          <div className='flex justify-center items -center bg-slate-900  w-full rounded-md px-3 py-2 text-white cursor-pointer '>
+          <div className='flex justify-center items -center bg-indigo-900  w-full rounded-md px-3 py-2 text-white cursor-pointer '>
             <button className='' type='submit'>Login</button>
           </div>
           <div className='text-slate-800 text-center'>
             <p>Do you have an acoount?
-              <span className='cursor-pointer' onClick={(() => { navigate("/signupform") })}> SignUp</span>
+              <span className='cursor-pointer text-indigo-800' onClick={(() => { navigate("/signupform") })}> SignUp</span>
             </p>
           </div>
         </div>

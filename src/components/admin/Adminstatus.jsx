@@ -25,8 +25,12 @@ function Adminstatus() {
             console.log("no token founded ")
             return;
         }
+<<<<<<< HEAD
         const Api_url=import.meta.env.VITE_API_URL
 
+=======
+      const Api_url=import.meta.env.VITE_API_URL
+>>>>>>> local
         const res = await fetch(`${Api_url}/api/admin/complaint/status`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,

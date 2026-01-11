@@ -19,7 +19,11 @@ export const RaiseComplaints = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
     console.log("TOKEN BEFORE POST:", localStorage.getItem("token"));
+<<<<<<< HEAD
     const Api_url=import.meta.env.VITE_API_URL
+=======
+const Api_url = import.meta.env.VITE_API_URL;
+>>>>>>> local
     try {
       const res = await fetch(`${Api_url}/api/complaint`, {
         method: "POST",
