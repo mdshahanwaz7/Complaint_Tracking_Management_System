@@ -1,5 +1,5 @@
 # ----------- Build Stage -----------
-FROM node:21 As build
+FROM node:20 As build
 
 
 WORKDIR /src
