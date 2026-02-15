@@ -1,21 +1,20 @@
-# ----------- Build Stage -----------
+# 1️⃣ Choose base image
 FROM node
 
-
+# 2️⃣ Create working directory inside container
 WORKDIR /src
 
+# 3️⃣ Copy package files
 COPY package*.json ./
+
+# 4️⃣ Install dependencies
 RUN npm install
 
+# 5️⃣ Copy rest of the project
 COPY . .
-RUN npm run build
 
+# 6️⃣ Expose port
+EXPOSE 3000
 
-# ----------- Production Stage -----------
-FROM nginx:alpine
-
-COPY --from=build /app/dist /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+# 7️⃣ Start app
+CMD ["npm", "start"]
