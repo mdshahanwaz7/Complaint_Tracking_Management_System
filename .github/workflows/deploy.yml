@@ -24,7 +24,7 @@ jobs:
         docker build -t ${{ secrets.DOCKER_USERNAME }}/mern-backend ./Backend
         docker push ${{ secrets.DOCKER_USERNAME }}/mern-backend
 
-    - name: Build and Push Frontend
-      run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/mern-frontend .
-        docker push ${{ secrets.DOCKER_USERNAME }}/mern-frontend
+    # - name: Build and Push Frontend
+    #   run: |
+    #     docker build -t ${{ secrets.DOCKER_USERNAME }}/mern-frontend .
+    #     docker push ${{ secrets.DOCKER_USERNAME }}/mern-frontend
