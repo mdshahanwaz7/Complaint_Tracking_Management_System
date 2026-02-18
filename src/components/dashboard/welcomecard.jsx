@@ -59,7 +59,9 @@ const WelcomeCard = () => {
 
   const getname = async () => {
 
+
      const Api_url=import.meta.env.VITE_API_URL
+
     try {
       const res = await fetch(`${Api_url}/api/user/welcome`, {
         method: "GET",

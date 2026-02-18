@@ -23,7 +23,11 @@ function Complaintssummary() {
             console.log("no token founded ")
             return;
         }
-       const Api_url=import.meta.env.VITE_API_URL
+
+      const Api_url=import.meta.env.VITE_API_URL
+
+       
+
         const res = await fetch(`${Api_url}/api/complaint/summary`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -47,8 +51,9 @@ function Complaintssummary() {
     const navigate = useNavigate()
 
     const getname = async () => {
+        const Api_url=import.meta.env.VITE_API_URL
         try {
-            const res = await fetch("http://localhost:2000/api/user/welcome", {
+            const res = await fetch(`${Api_url}/api/user/welcome`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -1,5 +1,10 @@
+import { RiSettings3Line } from "react-icons/ri";
+import { AiOutlineLogout } from "react-icons/ai";
+import { IoHomeSharp } from "react-icons/io5";
 import React, { useState } from 'react'
+import { LuChartColumnDecreasing } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom'
+import { FaRegUserCircle } from "react-icons/fa";
 
 export const Sidebar = () => {
 
@@ -8,22 +13,28 @@ const navigate=useNavigate()
 
     return (
         <div>
-           <aside className="w- bg-blue-950 opacity-90 text-white min-h-screen flex flex-col justify-between">
-  <ul className=" space-y-4 ">
-    <li className="whitespace-nowrap hover:bg-indigo-700 px-3  py-2 rounded">
-      Admin Panel
+           <aside className=" h-screen bg-indigo-950 opacity-90 text-white  flex flex-col justify-between items-center cursor-pointer  px-1 md:w-[50px]  lg:px-8  py-1   ">
+  <ul className=" flex flex-col gap-9 py-2 ">
+    <li className=" md:hover:bg-white md:hover:text-indigo-900 md:hover:py-1 rounded md:px-3 ">
+      <IoHomeSharp />
+
     </li>
-    <li className="whitespace-nowrap hover:bg-indigo-700 px-3 py-2 rounded">
-      Dashboard
+    <li className="whitespace-nowr md:hover:bg-white md:hover:text-indigo-900 md:hover:py-1 rounded md:px-3">
+      <FaRegUserCircle />
     </li>
-    <li className="whitespace-nowrap hover:bg-indigo-700 px-3 py-2 rounded">
-      Complaints
+    <li className="whitespace-nowra md:hover:bg-white md:hover:text-indigo-900 md:hover:py-1 rounded md:px-3 ">
+      <RiSettings3Line />
+    </li>
+    <li className=" md:hover:bg-white md:hover:text-indigo-900 md:hover:py-1 rounded md:px-3  ">
+       <LuChartColumnDecreasing />
     </li>
     
   </ul>
-  <div className=" whitespace-nowrap flex bg-white text-gray-700 text-center  mb-3 p-2 mx-3 rounded hover:m-2 shadow-md ">
-    <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg></div>
-    <button onClick={()=>{navigate('/')}} className=''>Logout</button>
+  
+  <div className="  rounded mb-10 md:hover:bg-white md:hover:text-indigo-900 md:hover:py-  md:px-4 ">
+    <div className="  ">
+    <button onClick={()=>{navigate('/')}} className='  '>
+      <AiOutlineLogout className="" /></button> </div>
 
   </div>
 </aside>
